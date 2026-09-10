@@ -1,0 +1,2184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Babawumi | Virtual Assistant</title>
+  <meta name="description" content="Professional portfolio of Daniel Babawumi - Remote Virtual Assistant, Administrative Support, and Operations Support." />
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* CSS Reset & Variables */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-primary: #ffffff;
+      --bg-subtle: #f8fafc;
+      --bg-card: #ffffff;
+      --navy-dark: #091322;
+      --navy-primary: #0f2744;
+      --navy-secondary: #173b64;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --accent-purple: #7c3aed;
+      --accent-purple-hover: #6d28d9;
+      --accent-purple-light: #f5f3ff;
+      --accent-teal: #0d9488;
+      --accent-teal-light: #f0fdfa;
+      --border: #e2e8f0;
+      --border-focus: #c4b5fd;
+      --badge-green-bg: #ecfdf5;
+      --badge-green-text: #047857;
+      --badge-green-dot: #10b981;
+
+      --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.03);
+      --shadow-card-hover: 0 20px 30px -6px rgba(15, 23, 42, 0.1), 0 10px 14px -4px rgba(124, 58, 237, 0.06);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+
+      --transition-fast: 0.18s ease;
+      --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .section-subtle {
+      background-color: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Typography Utilities */
+    h1, h2, h3, h4 {
+      color: var(--navy-primary);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header {
+      margin-bottom: 3.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-purple);
+      background: var(--accent-purple-light);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.85rem;
+      border: 1px solid #ddd6fe;
+    }
+
+    .section-header h2 {
+      font-size: 2.25rem;
+      color: var(--navy-dark);
+      margin-bottom: 0.85rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition-fast);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.65rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      transition: var(--transition-normal);
+      cursor: pointer;
+      border: 1px solid transparent;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--navy-primary) 0%, var(--accent-purple) 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--navy-secondary) 0%, var(--accent-purple-hover) 100%);
+      box-shadow: 0 6px 18px rgba(124, 58, 237, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--navy-primary);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-subtle);
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-contact-nav {
+      background: var(--navy-primary);
+      color: #ffffff;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.875rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: var(--transition-fast);
+    }
+
+    .btn-contact-nav:hover {
+      background: var(--accent-purple);
+      transform: translateY(-1px);
+    }
+
+    .btn-action-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.65rem 1.35rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--navy-primary) 0%, var(--accent-purple) 100%);
+      color: #ffffff;
+      transition: var(--transition-normal);
+      border: none;
+      box-shadow: 0 3px 10px rgba(124, 58, 237, 0.2);
+    }
+
+    .btn-action-card:hover {
+      background: linear-gradient(135deg, var(--navy-secondary) 0%, var(--accent-purple-hover) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(124, 58, 237, 0.32);
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      transition: var(--transition-normal);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--navy-primary) 0%, var(--accent-purple) 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-right: 0.6rem;
+      box-shadow: 0 2px 6px rgba(124, 58, 237, 0.25);
+    }
+
+    .brand-logo span {
+      font-weight: 500;
+      color: var(--accent-teal);
+      font-size: 0.85rem;
+      margin-left: 0.45rem;
+      padding-left: 0.45rem;
+      border-left: 1px solid var(--border);
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .nav-link {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      position: relative;
+      padding: 0.25rem 0;
+      transition: var(--transition-fast);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent-purple);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--navy-primary), var(--accent-purple));
+      border-radius: 2px;
+    }
+
+    .nav-right-cta {
+      display: flex;
+      align-items: center;
+      margin-left: 0.5rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      color: var(--navy-dark);
+      border-radius: var(--radius-sm);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 6rem 0 5.5rem 0;
+      background: radial-gradient(circle at 85% 15%, rgba(124, 58, 237, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 10% 70%, rgba(13, 148, 136, 0.06) 0%, transparent 40%),
+                  linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+      overflow: hidden;
+    }
+
+    .hero-decor-circle-1 {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.07), rgba(13, 148, 136, 0.04));
+      filter: blur(50px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-decor-circle-2 {
+      position: absolute;
+      bottom: -80px;
+      left: -60px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(15, 39, 68, 0.05), rgba(124, 58, 237, 0.05));
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 640px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background-color: var(--badge-green-bg);
+      color: var(--badge-green-text);
+      padding: 0.4rem 0.95rem;
+      border-radius: var(--radius-full);
+      font-size: 0.84rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      border: 1px solid #a7f3d0;
+      box-shadow: 0 1px 3px rgba(16, 185, 129, 0.12);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--badge-green-dot);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+      animation: pulse 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.2); }
+    }
+
+    .hero h1 {
+      font-size: 3.4rem;
+      color: var(--navy-dark);
+      letter-spacing: -0.035em;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero .role-title {
+      display: inline-block;
+      font-size: 1.45rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--navy-primary) 0%, var(--accent-purple) 70%, var(--accent-teal) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.4rem;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Hero Floating Visual Composition */
+    .hero-visual-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-dashboard-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+      width: 100%;
+      max-width: 390px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-card-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-full);
+      background: var(--accent-teal-light);
+      color: var(--accent-teal);
+      border: 1px solid #99f6e4;
+      text-transform: uppercase;
+    }
+
+    .hero-metric-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .hero-metric-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.75rem;
+      border-radius: var(--radius-md);
+      background: var(--bg-subtle);
+      border: 1px solid #edf2f7;
+      transition: var(--transition-fast);
+    }
+
+    .hero-metric-item:hover {
+      background: #ffffff;
+      border-color: #ddd6fe;
+      transform: translateX(3px);
+    }
+
+    .metric-icon-wrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icon-bg-purple {
+      background: var(--accent-purple-light);
+      color: var(--accent-purple);
+    }
+
+    .icon-bg-teal {
+      background: var(--accent-teal-light);
+      color: var(--accent-teal);
+    }
+
+    .icon-bg-navy {
+      background: #eff6ff;
+      color: var(--navy-secondary);
+    }
+
+    .metric-text-wrap {
+      flex-grow: 1;
+    }
+
+    .metric-title {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .metric-sub {
+      font-size: 0.76rem;
+      color: var(--text-light);
+    }
+
+    /* Floating badges on hero */
+    .floating-badge {
+      position: absolute;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 0.65rem 0.95rem;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy-primary);
+      z-index: 3;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .float-top-left {
+      top: -15px;
+      left: -20px;
+    }
+
+    .float-bottom-right {
+      bottom: -15px;
+      right: -20px;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2.5rem;
+      align-items: stretch;
+    }
+
+    .about-card-main {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.75rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1.35rem;
+      line-height: 1.75;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .competencies-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .competency-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--navy-dark);
+    }
+
+    .check-icon-wrap {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: var(--accent-purple-light);
+      color: var(--accent-purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Professional Snapshot Card */
+    .about-snapshot-card {
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg-subtle) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-snapshot-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--navy-primary), var(--accent-purple), var(--accent-teal));
+    }
+
+    .snapshot-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .snapshot-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .snapshot-sub {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    .snapshot-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .snapshot-item {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 0.75rem 0.9rem;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-fast);
+    }
+
+    .snapshot-item:hover {
+      border-color: #c4b5fd;
+      transform: translateX(3px);
+    }
+
+    .snapshot-item-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--bg-subtle);
+      color: var(--accent-purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .snapshot-item-text h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .snapshot-item-text p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .snapshot-highlight-box {
+      background: linear-gradient(135deg, rgba(15, 39, 68, 0.03) 0%, rgba(124, 58, 237, 0.05) 100%);
+      border: 1px dashed #cbd5e1;
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .snapshot-highlight-box p {
+      font-size: 0.84rem;
+      color: var(--navy-secondary);
+      font-weight: 600;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.85rem;
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+      border-color: #c4b5fd;
+    }
+
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--bg-subtle) 0%, var(--accent-purple-light) 100%);
+      color: var(--accent-purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid #ede9fe;
+      transition: var(--transition-fast);
+    }
+
+    .service-card:hover .service-icon-box {
+      background: linear-gradient(135deg, var(--accent-purple) 0%, var(--navy-primary) 100%);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 4px 10px rgba(124, 58, 237, 0.25);
+    }
+
+    .service-card h3 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+    }
+
+    .service-card p {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Work Samples Section */
+    .featured-samples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .sample-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+    }
+
+    .sample-card:hover {
+      transform: translateY(-4px);
+      border-color: #c4b5fd;
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .sample-preview-header {
+      background: linear-gradient(135deg, #091322 0%, var(--navy-primary) 60%, #1e1b4b 100%);
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 1rem;
+      color: #ffffff;
+    }
+
+    .sample-preview-header svg {
+      opacity: 0.85;
+      margin-bottom: 0.5rem;
+    }
+
+    .sample-pill-badge {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(6px);
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .sample-body {
+      padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sample-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-purple);
+      margin-bottom: 0.45rem;
+    }
+
+    .sample-body h3 {
+      font-size: 1.25rem;
+      color: var(--navy-dark);
+      margin-bottom: 0.75rem;
+      min-height: 2.8rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .sample-description {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1.4rem;
+      line-height: 1.65;
+      min-height: 4.8rem;
+    }
+
+    .skills-block {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .skills-block-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--navy-dark);
+      margin-bottom: 0.6rem;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .skill-pill {
+      font-size: 0.78rem;
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: var(--navy-secondary);
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .sample-clarification {
+      font-size: 0.81rem;
+      color: var(--text-light);
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .sample-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      padding-top: 1.35rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    /* Certifications Section */
+    .certifications-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cert-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--navy-primary) 0%, var(--accent-purple) 100%);
+    }
+
+    .cert-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card-hover);
+      border-color: #c4b5fd;
+    }
+
+    .cert-icon-wrap {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--accent-purple-light) 0%, #ede9fe 100%);
+      color: var(--accent-purple);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.35rem auto;
+      border: 1px solid #ddd6fe;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+    }
+
+    .cert-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .cert-issuer {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent-purple);
+      margin-bottom: 1.6rem;
+    }
+
+    /* Tools Section */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+    }
+
+    .tool-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1rem;
+      text-align: center;
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tool-item:hover {
+      border-color: #c4b5fd;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .tool-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--bg-subtle);
+      color: var(--navy-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      border: 1px solid #edf2f7;
+      transition: var(--transition-fast);
+    }
+
+    .tool-item:hover .tool-icon-box {
+      background: var(--accent-purple-light);
+      color: var(--accent-purple);
+      border-color: #ddd6fe;
+    }
+
+    .tool-name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .tool-purpose {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Work Process Timeline */
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
+      position: relative;
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, #cbd5e1 0%, var(--accent-purple) 50%, #cbd5e1 100%);
+      z-index: 0;
+    }
+
+    .process-step {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.15rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .process-step:hover {
+      transform: translateY(-4px);
+      border-color: #c4b5fd;
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .step-number-wrap {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--navy-primary) 0%, var(--accent-purple) 100%);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 1.1rem;
+      border: 3px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(124, 58, 237, 0.25);
+    }
+
+    .process-step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .process-step p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Contact Section */
+    .contact-card {
+      max-width: 860px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
+      border: 1px solid #e9d5ff;
+      border-radius: 20px;
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      right: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-card h2 {
+      font-size: 2.4rem;
+      color: var(--navy-dark);
+      margin-bottom: 0.85rem;
+    }
+
+    .contact-card > p {
+      color: var(--text-muted);
+      font-size: 1.08rem;
+      max-width: 600px;
+      margin: 0 auto 2.75rem auto;
+      line-height: 1.65;
+    }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.75rem;
+      text-align: left;
+    }
+
+    .method-item {
+      padding: 1.5rem 1.25rem;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .method-item:hover {
+      border-color: #c4b5fd;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .method-icon-wrap {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--accent-purple-light);
+      color: var(--accent-purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .method-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .method-value {
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: var(--navy-primary);
+      word-break: break-all;
+    }
+
+    .method-value a:hover {
+      color: var(--accent-purple);
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--navy-dark);
+      color: #94a3b8;
+      padding: 4rem 0 2rem 0;
+      font-size: 0.9rem;
+      border-top: 1px solid #1e293b;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      padding-bottom: 2.25rem;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .footer-brand span {
+      font-weight: 400;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-left: 0.5rem;
+      padding-left: 0.5rem;
+      border-left: 1px solid #334155;
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      color: #94a3b8;
+      transition: var(--transition-fast);
+      font-weight: 500;
+    }
+
+    .footer-nav a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      padding-top: 1.75rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .hero-visual-wrapper {
+        justify-content: flex-start;
+      }
+
+      .hero-dashboard-card {
+        max-width: 100%;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .process-timeline {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .process-timeline::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+
+      .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 4rem 0;
+      }
+
+      .hero {
+        padding: 4.5rem 0 3.5rem 0;
+      }
+
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+
+      .hero .role-title {
+        font-size: 1.25rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 4.5rem;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 2rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+        display: none;
+      }
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+      .nav-right-cta {
+        display: none;
+      }
+
+      .nav-link.active::after {
+        display: none;
+      }
+
+      .competencies-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .contact-card h2 {
+        font-size: 1.9rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="top">
+    <div class="container nav-container">
+      <a href="#top" class="brand-logo">
+        <div class="brand-logo-mark">DB</div>
+        Daniel Babawumi <span>VA</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#top" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work-samples" class="nav-link">Work Samples</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#tools" class="nav-link">Tools</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right-cta">
+        <a href="#contact" class="btn-contact-nav">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-decor-circle-1"></div>
+    <div class="hero-decor-circle-2"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Available for Remote Opportunities
+          </div>
+          <h1>Daniel Babawumi</h1>
+          <div class="role-title">Virtual Assistant</div>
+          <p class="hero-desc">
+            Reliable virtual assistance for administrative tasks, research, data organization, communication, and day-to-day support.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              Let's Work Together
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#work-samples" class="btn btn-secondary">
+              View My Work
+            </a>
+          </div>
+        </div>
+
+        <!-- Floating UI Presentation Card -->
+        <div class="hero-visual-wrapper">
+          <div class="floating-badge float-top-left">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Time-Zone Aware</span>
+          </div>
+
+          <div class="floating-badge float-bottom-right">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Detail-Oriented</span>
+          </div>
+
+          <div class="hero-dashboard-card">
+            <div class="hero-card-header">
+              <div class="hero-card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0f2744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                VA Operational Hub
+              </div>
+              <span class="hero-card-tag">Active</span>
+            </div>
+
+            <div class="hero-metric-list">
+              <div class="hero-metric-item">
+                <div class="metric-icon-wrap icon-bg-purple">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                </div>
+                <div class="metric-text-wrap">
+                  <div class="metric-title">Administrative Support</div>
+                  <div class="metric-sub">Structured documentation & workflows</div>
+                </div>
+              </div>
+
+              <div class="hero-metric-item">
+                <div class="metric-icon-wrap icon-bg-teal">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <div class="metric-text-wrap">
+                  <div class="metric-title">Verified Research</div>
+                  <div class="metric-sub">Accurate online information gathering</div>
+                </div>
+              </div>
+
+              <div class="hero-metric-item">
+                <div class="metric-icon-wrap icon-bg-navy">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"></path></svg>
+                </div>
+                <div class="metric-text-wrap">
+                  <div class="metric-title">Data Organization</div>
+                  <div class="metric-sub">Clean spreadsheets & record keeping</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section section-subtle" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Background & Approach</span>
+        <h2>About Me</h2>
+        <p>Reliable, organized, and focused on clear communication and practical execution.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Main Narrative Column -->
+        <div class="about-card-main">
+          <div class="about-text">
+            <p>
+              I’m Daniel Babawumi, a Virtual Assistant with practical experience supporting clients through freelance work and remote customer support. I’m organized, detail-oriented, adaptable, and committed to clear communication and reliable task completion.
+            </p>
+            <p>
+              My background in engineering has strengthened my analytical and structured approach to work, which I apply to administrative support, research, data organization, communication, and day-to-day virtual assistance.
+            </p>
+            <p>
+              I’m comfortable learning new tools and processes and enjoy helping individuals and businesses stay organized and productive.
+            </p>
+          </div>
+
+          <div class="competencies-grid">
+            <div class="competency-item">
+              <div class="check-icon-wrap">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Organized & Dependable</span>
+            </div>
+            <div class="competency-item">
+              <div class="check-icon-wrap">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Detail-Oriented Approach</span>
+            </div>
+            <div class="competency-item">
+              <div class="check-icon-wrap">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Adaptable & Fast Learner</span>
+            </div>
+            <div class="competency-item">
+              <div class="check-icon-wrap">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span>Clear & Timely Communication</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Snapshot Column -->
+        <div class="about-snapshot-card">
+          <div>
+            <div class="snapshot-header">
+              <div class="snapshot-title">Professional Snapshot</div>
+              <div class="snapshot-sub">Core capabilities & operational focus</div>
+            </div>
+
+            <div class="snapshot-items-list">
+              <div class="snapshot-item">
+                <div class="snapshot-item-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                </div>
+                <div class="snapshot-item-text">
+                  <h4>Virtual Assistant</h4>
+                  <p>Dedicated remote support & task management</p>
+                </div>
+              </div>
+
+              <div class="snapshot-item">
+                <div class="snapshot-item-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </div>
+                <div class="snapshot-item-text">
+                  <h4>Administrative Support</h4>
+                  <p>Scheduling, calendar, email, and files</p>
+                </div>
+              </div>
+
+              <div class="snapshot-item">
+                <div class="snapshot-item-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <div class="snapshot-item-text">
+                  <h4>Research & Analysis</h4>
+                  <p>Verified information gathering & comparisons</p>
+                </div>
+              </div>
+
+              <div class="snapshot-item">
+                <div class="snapshot-item-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <div class="snapshot-item-text">
+                  <h4>Customer Support</h4>
+                  <p>Clear, empathetic, and professional replies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="snapshot-highlight-box">
+            <p>Analytical engineering foundation applied to daily virtual operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">What I Offer</span>
+        <h2>Services I Can Support You With</h2>
+        <p>Reliable administrative, customer, and day-to-day organizational assistance.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Administrative Support -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3>Administrative Support</h3>
+          </div>
+          <p>Handling day-to-day administrative tasks, documentation, standard operating procedures, and routine workflows to keep business activities running smoothly.</p>
+        </div>
+
+        <!-- 2. Email Management -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <h3>Email Management</h3>
+          </div>
+          <p>Reviewing inboxes, organizing messages with labels and folders, drafting standard responses, flagging urgent items, and clearing clutter.</p>
+        </div>
+
+        <!-- 3. Calendar & Appointment Management -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3>Calendar & Appointment Management</h3>
+          </div>
+          <p>Scheduling meetings across different time zones, managing appointment invitations, sending reminders, and helping keep daily schedules organized.</p>
+        </div>
+
+        <!-- 4. Data Entry & Spreadsheet Management -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"></path></svg>
+            </div>
+            <h3>Data Entry & Spreadsheet Management</h3>
+          </div>
+          <p>Accurately entering data, standardizing spreadsheet information, removing duplicates, organizing columns, and maintaining clear records.</p>
+        </div>
+
+        <!-- 5. Internet Research -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <h3>Internet Research</h3>
+          </div>
+          <p>Conducting methodical online research, collecting verified information from credible sources, and organizing findings into neat comparison notes or summaries.</p>
+        </div>
+
+        <!-- 6. Customer Support -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3>Customer Support</h3>
+          </div>
+          <p>Replying to customer queries politely and professionally, addressing common questions, assisting with inquiries, and routing urgent issues appropriately.</p>
+        </div>
+
+        <!-- 7. Document Formatting -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <h3>Document Formatting</h3>
+          </div>
+          <p>Formatting reports, meeting notes, guides, and written documents with consistent font styles, neat headings, proper margins, and readable layouts.</p>
+        </div>
+
+        <!-- 8. File & Information Organization -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3>File & Information Organization</h3>
+          </div>
+          <p>Structuring cloud storage folders (Google Drive, OneDrive), creating clean folder hierarchies, and applying clear, consistent file-naming conventions.</p>
+        </div>
+
+        <!-- 9. Meeting & Task Coordination -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            </div>
+            <h3>Meeting & Task Coordination</h3>
+          </div>
+          <p>Organizing meeting links, distributing meeting agendas, noting action points, and updating task checklists to support team coordination.</p>
+        </div>
+
+        <!-- 10. General Virtual Assistance -->
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>General Virtual Assistance</h3>
+          </div>
+          <p>Providing adaptable day-to-day administrative help to assist busy professionals and teams in managing ongoing routine workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Samples Section (Three Featured Demonstrations) -->
+  <section class="section section-subtle" id="work-samples">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Practical Demonstrations</span>
+        <h2>Practice & Demonstration Samples</h2>
+        <p>Practical demonstration samples showcasing organization, research, data management, and scheduling support.</p>
+      </div>
+
+      <div class="featured-samples-grid">
+        <!-- SAMPLE 1 — DATA ENTRY & SPREADSHEET MANAGEMENT -->
+        <div class="sample-card">
+          <div class="sample-preview-header">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"></path></svg>
+            <span class="sample-pill-badge">Practice / Demonstration Sample</span>
+          </div>
+          <div class="sample-body">
+            <span class="sample-tag">Spreadsheet Organization</span>
+            <h3>Data Entry & Spreadsheet Management</h3>
+            <p class="sample-description">
+              Cleaned and organized a prospect database to demonstrate data entry, spreadsheet organization, data cleaning, formatting, categorization, and attention to detail.
+            </p>
+
+            <div class="skills-block">
+              <div class="skills-block-title">Skills Demonstrated</div>
+              <div class="skills-tags">
+                <span class="skill-pill">Data entry</span>
+                <span class="skill-pill">Data cleaning</span>
+                <span class="skill-pill">Spreadsheet organization</span>
+                <span class="skill-pill">Formatting</span>
+                <span class="skill-pill">Sorting and filtering</span>
+                <span class="skill-pill">Data categorization</span>
+                <span class="skill-pill">Attention to detail</span>
+              </div>
+            </div>
+
+            <p class="sample-clarification">
+              Note: Sourced from publicly available online information and structured solely as a practical demonstration exercise (not client data).
+            </p>
+
+            <div class="sample-footer">
+              <a
+                href="https://docs.google.com/spreadsheets/d/1mxtndxBsT3NpWuxAmy2MsmjoUCYSxtMn/edit?usp=sharing&ouid=100745033710013424901&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-action-card">
+                View Sample
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAMPLE 2 — INTERNET RESEARCH -->
+        <div class="sample-card">
+          <div class="sample-preview-header">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span class="sample-pill-badge">Practice / Demonstration Sample</span>
+          </div>
+          <div class="sample-body">
+            <span class="sample-tag">Research & Analysis</span>
+            <h3>Internet Research — Lagos vs Abuja Residential Property Market</h3>
+            <p class="sample-description">
+              Conducted online research comparing the Lagos and Abuja residential property markets, organizing information from reliable sources into a concise market comparison report.
+            </p>
+
+            <div class="skills-block">
+              <div class="skills-block-title">Skills Demonstrated</div>
+              <div class="skills-tags">
+                <span class="skill-pill">Internet research</span>
+                <span class="skill-pill">Information gathering</span>
+                <span class="skill-pill">Source verification</span>
+                <span class="skill-pill">Data comparison</span>
+                <span class="skill-pill">Information analysis</span>
+                <span class="skill-pill">Report preparation</span>
+                <span class="skill-pill">Professional document formatting</span>
+              </div>
+            </div>
+
+            <p class="sample-clarification">
+              Note: Prepared using independently gathered, verified public data to demonstrate structured comparative market research and reporting.
+            </p>
+
+            <div class="sample-footer">
+              <a
+                href="https://drive.google.com/file/d/1XKTvJCCyvvq2Wz-VUcrjw9qAPlED68Iw/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-action-card">
+                View Sample
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAMPLE 3 — CALENDAR & APPOINTMENT MANAGEMENT -->
+        <div class="sample-card">
+          <div class="sample-preview-header">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span class="sample-pill-badge">Practice / Demonstration Sample</span>
+          </div>
+          <div class="sample-body">
+            <span class="sample-tag">Schedule Coordination</span>
+            <h3>Calendar & Appointment Management</h3>
+            <p class="sample-description">
+              Organized a professional's weekly schedule by tracking appointments, priorities, availability, and confirmation status.
+            </p>
+
+            <div class="skills-block">
+              <div class="skills-block-title">Skills Demonstrated</div>
+              <div class="skills-tags">
+                <span class="skill-pill">Appointment tracking</span>
+                <span class="skill-pill">Schedule coordination</span>
+                <span class="skill-pill">Priority management</span>
+                <span class="skill-pill">Time allocation</span>
+                <span class="skill-pill">Confirmation tracking</span>
+                <span class="skill-pill">Attention to detail</span>
+              </div>
+            </div>
+
+            <p class="sample-clarification">
+              Note: Created as a structured mock schedule to demonstrate professional appointment tracking, priority labeling, and availability management.
+            </p>
+
+            <div class="sample-footer">
+              <a
+                href="https://docs.google.com/spreadsheets/d/11fAiQkuDOemC0cJXyAXJ641dXcg5d60xnMn8xdxDk1Y/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-action-card">
+                View Sample
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Credentials</span>
+        <h2>Certifications</h2>
+        <p>Verified professional training and foundational credential.</p>
+      </div>
+
+      <div class="certifications-wrapper">
+        <div class="cert-card">
+          <div class="cert-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <div class="cert-title">Virtual Assistant Certificate</div>
+          <div class="cert-issuer">ALX Africa | 2022</div>
+          <a
+            href="https://drive.google.com/file/d/1ZWLRCOtUiyrcAy5jiqHJJQDq7gI4tU_g/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-action-card">
+            View Certificate
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="section section-subtle" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Productivity Stack</span>
+        <h2>Tools I Can Work With</h2>
+        <p>Software and collaborative applications I use for administrative support and daily workflows.</p>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <div class="tool-name">Google Docs</div>
+          <div class="tool-purpose">Documentation & Notes</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"></path></svg>
+          </div>
+          <div class="tool-name">Google Sheets</div>
+          <div class="tool-purpose">Spreadsheets & Data Entry</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <div class="tool-name">Google Drive</div>
+          <div class="tool-purpose">File Storage & Sharing</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div class="tool-name">Gmail</div>
+          <div class="tool-purpose">Email Communication & Labels</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <div class="tool-name">Google Calendar</div>
+          <div class="tool-purpose">Scheduling & Reminders</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div class="tool-name">Microsoft Word</div>
+          <div class="tool-purpose">Document Preparation</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <div class="tool-name">Microsoft Excel</div>
+          <div class="tool-purpose">Data Records & Sorting</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+          </div>
+          <div class="tool-name">Canva</div>
+          <div class="tool-purpose">Basic Graphics & Visuals</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="6" y="6" width="4" height="10" rx="1"></rect><rect x="14" y="6" width="4" height="6" rx="1"></rect></svg>
+          </div>
+          <div class="tool-name">Trello</div>
+          <div class="tool-purpose">Task & Board Management</div>
+        </div>
+
+        <div class="tool-item">
+          <div class="tool-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          </div>
+          <div class="tool-name">Zoom</div>
+          <div class="tool-purpose">Meetings & Video Calls</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Process Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Work Methodology</span>
+        <h2>How I Work</h2>
+        <p>A clear, reliable approach to managing administrative tasks and supporting daily operations.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-number-wrap">1</div>
+          <h3>Understand Task</h3>
+          <p>Review requirements thoroughly, ask clarifying questions early, and verify expectations and deadlines.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number-wrap">2</div>
+          <h3>Organize & Plan</h3>
+          <p>Break the task into clear steps, gather necessary information, and organize the workflow.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number-wrap">3</div>
+          <h3>Execute Carefully</h3>
+          <p>Complete the assignment with focused attention to detail, accuracy, and specified guidelines.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number-wrap">4</div>
+          <h3>Communicate Clearly</h3>
+          <p>Provide regular status updates, confirm completion milestones, and raise questions promptly.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number-wrap">5</div>
+          <h3>Deliver on Time</h3>
+          <p>Review the completed work for quality and consistency, delivering files cleanly and punctually.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-subtle" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Let's Work Together</h2>
+        <p>
+          I am available for remote Virtual Assistant, Administrative Support, and Customer Support opportunities. Feel free to contact me to discuss how I can assist you and your team.
+        </p>
+
+        <div class="contact-methods">
+          <!-- Email -->
+          <div class="method-item">
+            <div class="method-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="method-label">Email</div>
+            <div class="method-value">
+              <a href="mailto:danielbabawumi@gmail.com">danielbabawumi@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="method-item">
+            <div class="method-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </div>
+            <div class="method-label">LinkedIn</div>
+            <div class="method-value">
+              <a href="https://linkedin.com/in/daniel-babawumi" target="_blank" rel="noopener noreferrer">linkedin.com/in/daniel-babawumi</a>
+            </div>
+          </div>
+
+          <!-- Phone/WhatsApp -->
+          <div class="method-item">
+            <div class="method-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="method-label">Phone / WhatsApp</div>
+            <div class="method-value">
+              <a href="tel:+2349159887870">+234 915 988 7870</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="mailto:danielbabawumi@gmail.com" class="btn btn-primary">
+          Send an Email
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="brand-logo-mark" style="background: rgba(255, 255, 255, 0.1); box-shadow: none;">DB</div>
+          Daniel Babawumi <span>Virtual Assistant</span>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work-samples">Work Samples</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Daniel Babawumi. Virtual Assistant Portfolio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Interactive Handling -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('navMenu');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section[id], header[id]');
+
+      // Mobile Drawer Toggle
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('open');
+        });
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+          });
+        });
+      }
+
+      // Scrollspy active state on navbar
+      window.addEventListener('scroll', () => {
+        let currentSection = '';
+        const scrollPosition = window.pageYOffset + 140;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
